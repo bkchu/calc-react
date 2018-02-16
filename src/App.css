@@ -5,6 +5,7 @@ body {
   font-weight: bold;
   font-size: calc(1em + 1vw);
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 575.99px) {
@@ -69,16 +70,14 @@ body {
   font-weight: bold;
   font-size: 0.8em;
   font-family: "Montserrat", sans-serif;
+  overflow: auto;
 }
 
-.Output input {
-  text-overflow: clip;
-  overflow-x: hidden;
-  white-space: nowrap;
-  direction: ltr;
+.Output textarea {
+  resize: none;
 }
-
-.Output input:focus,
-.outPut input:active {
+.Output textarea:hover,
+.Output textarea:focus,
+.outPut textarea:active {
   outline: none;
 }
