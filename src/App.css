@@ -1,0 +1,84 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: calc(1em + 1vw);
+  font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (max-width: 575.99px) {
+  html,
+  body {
+    font-size: calc(1.3em + 1vw);
+  }
+}
+.App {
+  margin: 12.5vh auto;
+  width: 50vw;
+  min-height: 75vh;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "o o o o";
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 575.99px) {
+  .App {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.Button {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding: 10%;
+  transition: all 0.05s ease-in-out;
+  min-height: 50px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 575.99px) {
+  .Button {
+    padding: 0;
+    transition: none;
+  }
+}
+
+.Button:focus,
+.Button:active {
+  outline: none;
+}
+.Button:active {
+  background-color: #ccc;
+}
+
+.Output {
+  padding: 0 20px;
+  border: 1px solid black;
+  grid-area: o;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Output input {
+  text-overflow: clip;
+  overflow-x: hidden;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.Output input:focus,
+.outPut input:active {
+  outline: none;
+}
