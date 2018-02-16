@@ -15,7 +15,6 @@ class App extends Component {
   };
 
   onChangeHandler = event => {
-    console.log(event.target.value);
     this.setState({ query: event.target.value });
   };
 
@@ -122,7 +121,9 @@ class App extends Component {
             numParens: 0
           };
         } catch (error) {
-          console.log("ERROR");
+          stateObj = {
+            query: "ERROR!"
+          };
         }
         break;
       //for a number
