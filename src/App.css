@@ -2,9 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-weight: bold;
   font-size: calc(1em + 1vw);
-  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
@@ -22,7 +20,8 @@ body {
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
   grid-template-areas: "o o o o";
-  border: 1px solid black;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
 }
 
 @media only screen and (max-width: 575.99px) {
@@ -35,13 +34,14 @@ body {
 
 .Button {
   background-color: transparent;
-  border: 1px solid black;
+  border: none;
   color: black;
   padding: 10%;
   transition: all 0.05s ease-in-out;
   min-height: 50px;
   font-weight: bold;
   font-size: 0.8em;
+  font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 575.99px) {
@@ -61,21 +61,18 @@ body {
 
 .Output {
   padding: 0 20px;
-  border: 1px solid black;
+  border: none;
   grid-area: o;
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: bold;
   font-size: 0.8em;
-  font-family: "Montserrat", sans-serif;
+
+  font-family: "Roboto Condensed", sans-serif;
   overflow: auto;
 }
 
-.Output textarea {
-  resize: none;
-}
 .Output textarea:hover,
 .Output textarea:focus,
 .outPut textarea:active {
