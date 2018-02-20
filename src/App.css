@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-size: calc(1em + 1vw);
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 @media only screen and (max-width: 575.99px) {
@@ -13,9 +14,9 @@ body {
   }
 }
 .App {
-  margin: 12.5vh auto;
-  width: 50vw;
-  min-height: 75vh;
+  margin: 5vh auto;
+
+  width: 25vw;
   display: grid;
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
@@ -24,11 +25,20 @@ body {
   box-shadow: 0 2px 3px #ccc;
 }
 
+@media only screen and (max-width: 900px) {
+  .App {
+    width: 50vw;
+    min-height: 92vh;
+  }
+}
+
 @media only screen and (max-width: 575.99px) {
   .App {
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 92vh;
+    box-shadow: none;
+    border: none;
   }
 }
 
@@ -36,7 +46,6 @@ body {
   background-color: transparent;
   border: none;
   color: black;
-  padding: 10%;
   transition: all 0.05s ease-in-out;
   min-height: 50px;
   font-weight: bold;
@@ -60,15 +69,15 @@ body {
 }
 
 .Output {
-  padding: 0 20px;
+  margin: 10px;
   border: none;
   grid-area: o;
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 0.8em;
-
+  font-size: 0.7em;
+  resize: none;
   font-family: "Roboto Condensed", sans-serif;
   overflow: auto;
 }

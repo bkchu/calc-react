@@ -1,11 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-const output = props => {
-  return (
-    <textarea onChange={props.changed} value={props.query} className="Output">
-      {props.query}
-    </textarea>
-  );
-};
+class Output extends Component {
+  componentDidUpdate() {
+    this.inputRef.scrollTop = this.inputRef.scrollHeight;
+  }
+  render() {
+    return (
+      <textarea
+        style={{ maxHeight: "100px" }}
+        onChange={this.props.changed}
+        value={this.props.query}
+        className="Output"
+        ref={input => (this.inputRef = input)}
+      >
+        {this.props.query}
+      </textarea>
+    );
+  }
+}
 
-export default output;
+export default Output;
